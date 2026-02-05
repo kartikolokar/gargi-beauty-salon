@@ -1,54 +1,120 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
 }
 
-header {
-  background-color: #0a58ca;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-section {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-h2 {
-  color: #0a58ca;
-}
-
-button {
-  padding: 10px 15px;
-  background-color: #0a58ca;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #084298;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #222;
-  color: white;
-}
-
+/* Header */
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 15px;
+  padding: 15px;
+  background-color: #f06292;
+  color: white;
 }
 
 .logo {
   width: 70px;
+  height: auto;
 }
 
+.header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+/* Sections */
+section {
+  background: white;
+  margin: 15px;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #f06292;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Links */
+a {
+  color: #f06292;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* WhatsApp Button */
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  margin-top: 15px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1ebe5d;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ---------- Desktop Improvement ---------- */
+@media (min-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  section {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  button {
+    width: auto;
+    padding: 12px 25px;
+  }
+}
