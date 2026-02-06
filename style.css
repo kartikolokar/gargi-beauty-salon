@@ -254,3 +254,58 @@ footer {
   box-shadow: 0 10px 25px rgba(30, 136, 229, 0.4);
 }
 
+/* Text watermark across the entire page */
+body::before {
+  content: "Gargi Beauty Salon & Academy";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 10vw; /* large size relative to viewport */
+  color: rgba(30, 58, 138, 0.07); /* very light blue, low opacity */
+  pointer-events: none; /* ignore mouse events */
+  user-select: none; /* prevent text selection */
+  white-space: nowrap;
+  z-index: 0;
+  font-weight: 900;
+  letter-spacing: 1vw;
+}
+
+/* Make sure main content is above watermark */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Small developer watermark fixed at bottom-right */
+/* Small developer watermark fixed at bottom-right */
+body::after {
+  content: "Developed by Kartik Olokar";
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  font-size: 12px;
+  color: rgba(30, 58, 138, 0.5);
+  font-weight: 600;
+  font-family: "Poppins", Arial, sans-serif;
+  pointer-events: none;
+  user-select: none;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(30, 58, 138, 0.2);
+  opacity: 1;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+body.hide-dev-watermark::after {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  visibility: hidden;  /* <-- added missing semicolon */
+}
+
+
+
+
