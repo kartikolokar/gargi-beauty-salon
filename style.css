@@ -255,7 +255,7 @@ footer {
 }
 
 /* Text watermark across the entire page */
-body::before {
+/* body::before {
   content: "Gargi Beauty Salon & Academy";
   position: fixed;
   top: 50%;
@@ -269,7 +269,7 @@ body::before {
   z-index: 0;
   font-weight: 900;
   letter-spacing: 1vw;
-}
+} */
 
 /* Make sure main content is above watermark */
 .container {
@@ -305,6 +305,31 @@ body.hide-dev-watermark::after {
   user-select: none;
   visibility: hidden;  /* <-- added missing semicolon */
 }
+
+html, body {
+  overflow: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 999999;
+}
+
+
+
+
 
 
 
